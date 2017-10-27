@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://use.fontawesome.com/26ca5068a4.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <!-- <script src="./external/jquery-ui-1.12.1/jquery-ui.js"></script> -->
+  <title></title>
+</head>
+<body>
+  <yj-resume>
+
+    <!-- Basic info -->
+    <yj-basic-info slot="basic-info">
+      <span slot="major-name">Your Name</span>
+      <!-- <span slot="minor-name">Secondary Name</span> -->
+      <span slot="description">Describe Yourself</span>
+    </yj-basic-info>
+
+    <!-- Links -->
+    <yj-link-bar slot="link-bar">
+      <yj-link slot="link" name="facebook" label="your.name" url="#"></yj-link>
+      <yj-link slot="link" name="twitter" label="@yourname" url="#"></yj-link>
+      <yj-link slot="link" name="linkedin" label="yname" url="#"></yj-link>
+      <yj-link slot="link" name="github" label="asdf" url="#"></yj-link>
+      <yj-link slot="link" name="medium" label="qwerty" url="#"></yj-link>
+    </yj-link-bar>
+
+    <!-- Long Bio -->
+    <yj-long-bio slot="long-bio">
+      Oh my
+    </yj-long-bio>
+
+    <!-- Education History -->
+  </yj-resume>
+  
+
+  <!-- <album-view album-name="Mariah Carey" artist-name="Mariah Carey" artwork-path="img/mariah-carey.jpg"></album-view>
+  <album-view album-name="Emotions" artist-name="Mariah Carey" artwork-path="img/emotions.jpg"></album-view>
+  <album-view album-name="Music Box" artist-name="Mariah Carey" artwork-path="img/music-box.jpg"></album-view>
+  <album-view album-name="Daydream" artist-name="Mariah Carey" artwork-path="img/daydream.jpg"></album-view> -->
+  
+  <script src="bundle.js"></script>
+</body>
+</html>
