@@ -28,6 +28,7 @@ class YJBasicInfoElement extends HTMLElement {
         padding: 10px 0 0 0;
         box-sizing: border-box;
         text-align: center;
+        font-weight: 200;
         color: ${ColorPalette.Sidebar.ForegroundLightweight};
       }
     </style>

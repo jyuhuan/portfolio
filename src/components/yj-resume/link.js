@@ -26,7 +26,7 @@ class YJLinkElement extends HTMLElement {
       $(labelDiv).animate(
         {
           width: this.labelWidth,
-          padding: "0 5px 0 5px"
+          padding: "0 5px 0 4px"
         },
         {
           duration: this.animationDurationMillisecond
@@ -86,26 +86,29 @@ class YJLinkElement extends HTMLElement {
         box-sizing: border-box;
         margin: 2px;
         text-decoration: none;
+        z-index: 1000;
       }
     
       .graphic {
         width: ${size};
         line-height: ${size};
         height: ${size};
-        font-size: 20px;
+        font-size: 18px;
         transition: background ${this.animationDurationSec}, color ${this.animationDurationSec}, border-radius ${this.animationDurationSec};
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
+        z-index: 100;
       }
     
       .label {
         font-size: 0.9rem;
-        font-weight: 900;
-        padding: 0 3px 0 3px;
+        font-weight: 500;
+        letter-spacing: -0.03rem;
         width: min-content;
         line-height: ${size};
         height: ${size};
         overflow: hidden;
+        z-index: 100;
       }
     
     </style>
@@ -127,8 +130,6 @@ class YJLinkElement extends HTMLElement {
     // Remember the width
     $(() => {
       this.labelWidth = labelDiv.getBoundingClientRect().width;
-      console.log(labelDiv)
-      console.log(`${this.labelWidth}`)
       // Initial state of the label
       labelDiv.style.width = "0px";
       labelDiv.style.padding = "0 0 0 0";

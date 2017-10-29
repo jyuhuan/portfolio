@@ -1,29 +1,33 @@
-const ColorPalette = require('./color-palette');
-
-class YJLinkBarElement extends HTMLElement {
+class YJResourceElement extends HTMLElement {
   constructor() {
     super();
     this.isFirstLoad = true;
     this.shadowDOM = this.attachShadow({mode: 'open'});
     this.shadowDOM.innerHTML = `
     <style>
-    @import "./external/font-awesome-4.7.0/css/font-awesome.css";
+      @import "./external/font-awesome-4.7.0/css/font-awesome.css";
     
-      .link-bar {
+      .resource {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        padding: 10px 0;
+        font-size: 0.9rem;
       }
 
-      div ::slotted([slot=link]) {
+      .icon {
+        margin-right: 5px;
       }
+
+      .label {
+
+      }
+  
     </style>
-
-    <div class="link-bar">
-      <slot name="link"></slot>
+  
+    <div class="resource">
+      <div class="icon"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div>
+      <div class="label">Paper</div>
     </div>
-        `;
+        `;  
   }
 
   connectedCallback() {
@@ -45,6 +49,4 @@ class YJLinkBarElement extends HTMLElement {
   }
 
 }
-customElements.define('yj-link-bar', YJLinkBarElement);
-
-
+customElements.define('yj-resource', YJResourceElement);
